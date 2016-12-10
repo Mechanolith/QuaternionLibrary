@@ -77,6 +77,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -112,7 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="OutputFunctions.h" />
     <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="QuaternionTests.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="OutputFunctions.cpp" />
+    <ClCompile Include="QuaternionTests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
